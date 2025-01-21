@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python 3.10
     - setuptools
     - pip
   run:
-    - python >={{ python_min }}
+    - python >=3.10
     - numpy
     - pandas
     - pyside6
@@ -37,7 +37,7 @@ test:
     - pip check
   requires:
     - pip
-    - python {{ python_min }}
+    - python 3.10
 
 about:
   summary: GUI for processing spectrophotometric pH data
