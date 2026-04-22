@@ -1,5 +1,5 @@
 {% set name = "phroc" %}
-{% set version = "0.3" %}
+{% set version = "0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/phroc-{{ version }}.tar.gz
-  sha256: 99d45db479caab2a237f58384e392403fc2ae2c9b4ace083eb9712e50bef2fe9
+  sha256: 3923ecb6c673e4d65610eb8704ad7216805d0a989afba26817a72db8fc15c655
 
 build:
   entry_points:
     - phroc = phroc:phroc_run
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
